@@ -1,14 +1,22 @@
 PODS:
+  - MBProgressHUD (1.0.0)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
+  - MBProgressHUD (~> 1.0.0)
   - SDWebImage (~> 4.0.0)
+  - YYKit (~> 1.0.9)
 
 SPEC CHECKSUMS:
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: bf36d9517319f5775b4cd5635d37895e1bddd8cb
+PODFILE CHECKSUM: 002394ea5b3994f8071fe065b58ea00b7f4cb9f3
 
 COCOAPODS: 1.2.0
