@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "FMDBManager.h"
 
 @interface ViewController ()
 
@@ -24,6 +25,31 @@
     textLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:textLabel];
     textLabel.text = NSLocalizedString(@"皮皮虾，我们走", @"");
+
+    //数据库操作类
+    FMDBManager *manager = [FMDBManager shareManager];
+
+    //创建表
+    NSString *createSql = @"CREATE TABLE IF NOT EXISTS User (id integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL, age integer NOT NULL)";
+
+   BOOL isSuccend = [manager createTableWithSQLSentence:createSql];
+    if (!isSuccend) {
+        //创建表失败
+        NSLog(@"eror");
+    }
+
+    //插入数据
+    NSDictionary *dic = @{
+                          @"id":@(1005),
+                          @"name":@"lhj",
+                          @"age":@(24)
+                          };
+    [manager insertDataWithSQLSentence:@"insert into User (id,name,age) values (:id,:name,:age);" andParameterDic:dic];
+
+    //查询
+    NSDictionary *resultDic = [manager selectWithSQLSentence:@"SELECT * FROM User"];
+    NSLog(@"%@",resultDic);
+    
 
 
 }

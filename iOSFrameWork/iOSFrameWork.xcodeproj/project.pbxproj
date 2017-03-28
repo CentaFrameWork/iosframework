@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BC1DBECEEF28E206610D4326 /* libPods-iOSFrameWork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7076520221C0E7C5A334C7C2 /* libPods-iOSFrameWork.a */; };
+		CF5E4D1C1E8A051900D48B57 /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5E4D1B1E8A051900D48B57 /* FMDBManager.m */; };
 		CFD1C8491E56A3C000EBDDE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD1C8481E56A3C000EBDDE7 /* main.m */; };
 		CFD1C84C1E56A3C000EBDDE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD1C84B1E56A3C000EBDDE7 /* AppDelegate.m */; };
 		CFD1C84F1E56A3C000EBDDE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD1C84E1E56A3C000EBDDE7 /* ViewController.m */; };
@@ -32,6 +33,8 @@
 /* Begin PBXFileReference section */
 		7076520221C0E7C5A334C7C2 /* libPods-iOSFrameWork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSFrameWork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B7E41052C46DFF74F426B30 /* Pods-iOSFrameWork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSFrameWork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSFrameWork/Pods-iOSFrameWork.debug.xcconfig"; sourceTree = "<group>"; };
+		CF5E4D1A1E8A051900D48B57 /* FMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBManager.h; sourceTree = "<group>"; };
+		CF5E4D1B1E8A051900D48B57 /* FMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBManager.m; sourceTree = "<group>"; };
 		CFD1C8441E56A3C000EBDDE7 /* iOSFrameWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSFrameWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD1C8481E56A3C000EBDDE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CFD1C84A1E56A3C000EBDDE7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,6 +103,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CF5E4D161E8A044B00D48B57 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				CF5E4D1A1E8A051900D48B57 /* FMDBManager.h */,
+				CF5E4D1B1E8A051900D48B57 /* FMDBManager.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		CFD1C83B1E56A3C000EBDDE7 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +135,7 @@
 		CFD1C8461E56A3C000EBDDE7 /* iOSFrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				CF5E4D161E8A044B00D48B57 /* Tools */,
 				CFD1C84A1E56A3C000EBDDE7 /* AppDelegate.h */,
 				CFD1C84B1E56A3C000EBDDE7 /* AppDelegate.m */,
 				CFD1C84D1E56A3C000EBDDE7 /* ViewController.h */,
@@ -311,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF5E4D1C1E8A051900D48B57 /* FMDBManager.m in Sources */,
 				CFD1C84F1E56A3C000EBDDE7 /* ViewController.m in Sources */,
 				CFD1C84C1E56A3C000EBDDE7 /* AppDelegate.m in Sources */,
 				CFD1C8491E56A3C000EBDDE7 /* main.m in Sources */,
