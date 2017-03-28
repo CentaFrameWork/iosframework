@@ -1,4 +1,7 @@
 PODS:
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
   - MBProgressHUD (1.0.0)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
@@ -8,15 +11,17 @@ PODS:
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
+  - FMDB (~> 2.6.2)
   - MBProgressHUD (~> 1.0.0)
   - SDWebImage (~> 4.0.0)
   - YYKit (~> 1.0.9)
 
 SPEC CHECKSUMS:
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 002394ea5b3994f8071fe065b58ea00b7f4cb9f3
+PODFILE CHECKSUM: 701364f5ccf354b1735adec529d9c9f908601974
 
 COCOAPODS: 1.2.0
