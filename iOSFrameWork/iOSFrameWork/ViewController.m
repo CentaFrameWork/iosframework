@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "FMDBManager.h"
+#import "UIView+YYAdd.h"
+#import "DemoViewController.h"
 
 @interface ViewController ()
 
@@ -78,9 +80,29 @@
 
 
 #warning ----模拟网络请求
-//    UIButton *
-
+    UIButton *imitateRequestButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    imitateRequestButton.frame = CGRectMake(textLabel.left, textLabel.bottom + 50, textLabel.width, textLabel.height);
+    [imitateRequestButton setTitle:@"模拟网络请求" forState:UIControlStateNormal];
+    imitateRequestButton.backgroundColor = [UIColor orangeColor];
+    [imitateRequestButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [imitateRequestButton addTarget:self action:@selector(imitateRequestAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:imitateRequestButton];
+    
 }
+
+/**
+ *  模拟网络请求
+ */
+- (void)imitateRequestAction
+{
+    DemoViewController *demoVC = [DemoViewController new];
+    
+    [self presentViewController:demoVC animated:YES completion:^{
+        
+        
+    }];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
