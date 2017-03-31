@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+#warning ----多语言设置
     self.view.backgroundColor = [UIColor whiteColor];
     UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake((self.view.frame.size.width - 150)/2, 100, 150,50)];
     textLabel.backgroundColor = [UIColor orangeColor];
@@ -26,6 +27,7 @@
     [self.view addSubview:textLabel];
     textLabel.text = NSLocalizedString(@"皮皮虾，我们走", @"");
 
+#warning ----数据库操作
     //数据库操作类
     FMDBManager *manager = [FMDBManager shareManager];
 
@@ -50,6 +52,9 @@
     NSDictionary *resultDic = [manager selectWithSQLSentence:@"SELECT * FROM User"];
     NSLog(@"%@",resultDic);
 
+#warning ----模拟网络请求
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
