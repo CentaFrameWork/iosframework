@@ -97,18 +97,43 @@ static FMDBManager *dbManager = nil;
 /**
  *插入数据
  **/
-- (BOOL)insertDataWithSQLSentence:(NSString *)sentence andParameterDic:(NSDictionary *)parmaDic{
+- (BOOL)insertDataWithTableName:(NSString *)tableName andParameterDic:(NSDictionary *)parmaDic{
+
     if (![_dataBase open]) {
         //数据库打开失败
+        NSLog(@"************数据库打开失败**************");
         return NO;
     }
 
+    if (![self isTableExist:tableName]) {
+        //数据库该表不存在
+        NSLog(@"-------%@表不存在-------",tableName);
+        return NO;
+    }
+
+
+    NSArray *allKeysArr = [parmaDic allKeys];
+    NSString *keyStr = [allKeysArr componentsJoinedByString:@","];
+
+    NSMutableArray *mArr = [NSMutableArray array];
+    for (NSString *keyStr in allKeysArr) {
+        NSString *newKeyStr = [NSString stringWithFormat:@":%@",keyStr];
+        [mArr addObject:newKeyStr];
+    }
+
+    NSString *newKeyStr = [mArr componentsJoinedByString:@","];
+
+    
+    NSString *inserSql = [NSString stringWithFormat:@"INSERT INTO %@(%@) VALUES(%@)",tableName,keyStr,newKeyStr];
+    mArr = nil;
+
     //开始操作事物
     [_dataBase beginTransaction];
-    BOOL isSuccessed = [_dataBase executeUpdate:sentence withParameterDictionary:parmaDic];
+    BOOL isSuccessed = [_dataBase executeUpdate:inserSql withParameterDictionary:parmaDic];
 
     if (isSuccessed) {
         //插入数据成功
+        NSLog(@"**********表%@插入数据成功**********",tableName);
     }else{
         //插入数据失败
         NSLog(@"error:%@",_dataBase.lastErrorMessage);
@@ -153,8 +178,19 @@ static FMDBManager *dbManager = nil;
     }
 
     FMResultSet *rs = [_dataBase executeQuery:sentence];
+    NSMutableArray *mArr = [NSMutableArray array];
     while ([rs next]){
         //遍历数据库
+        int idNum = [rs intForColumn:@"id"];
+        NSString *name = [rs stringForColumn:@"name"];
+        int age = [rs intForColumn:@"age"];
+
+        NSDictionary *dic = @{
+                              @"id":@(idNum),
+                              @"name":name,
+                              @"age":@(age)
+                              };
+
 
     }
 
@@ -167,9 +203,14 @@ static FMDBManager *dbManager = nil;
 /**
  *删除数据
  **/
-- (BOOL)deleteDataWithSQLSentence:(NSString *)sentence{
+- (BOOL)deleteDataWithTableName:(NSString *)tableName andSQLSentence:(NSString *)sentence{
     if (![_dataBase open]) {
         //数据库打开失败
+        return NO;
+    }
+
+    if (![self isTableExist:tableName]) {
+        NSLog(@"-------%@表不存在-------",tableName);
         return NO;
     }
 

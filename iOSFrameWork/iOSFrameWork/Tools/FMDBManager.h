@@ -37,7 +37,7 @@
 /**
  *插入数据
  **/
-- (BOOL)insertDataWithSQLSentence:(NSString *)sentence andParameterDic:(NSDictionary *)parmaDic;
+- (BOOL)insertDataWithTableName:(NSString *)tableName andParameterDic:(NSDictionary *)parmaDic;
 
 /**
  *修改数据
@@ -52,7 +52,7 @@
 /**
  *删除数据
  **/
-- (BOOL)deleteDataWithSQLSentence:(NSString *)sentence;
+- (BOOL)deleteDataWithTableName:(NSString *)tableName andSQLSentence:(NSString *)sentence;
 
 
 

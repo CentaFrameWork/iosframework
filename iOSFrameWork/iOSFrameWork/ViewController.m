@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+
 #warning ----多语言设置
     self.view.backgroundColor = [UIColor whiteColor];
     UILabel *textLabel = [[UILabel alloc] initWithFrame:CGRectMake((self.view.frame.size.width - 150)/2, 100, 150,50)];
@@ -32,29 +33,29 @@
     FMDBManager *manager = [FMDBManager shareManager];
 
     //创建表
-    NSString *createSql = @"CREATE TABLE IF NOT EXISTS User (id integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL, age integer NOT NULL)";
-
-   BOOL isSuccend = [manager createTableWithSQLSentence:createSql];
-    if (!isSuccend) {
-        //创建表失败
-        NSLog(@"eror");
-    }
-
-    //插入数据
-    NSDictionary *dic = @{
-                          @"id":@(1005),
-                          @"name":@"lhj",
-                          @"age":@(24)
-                          };
-    [manager insertDataWithSQLSentence:@"insert into User (id,name,age) values (:id,:name,:age);" andParameterDic:dic];
+    //    NSString *createSql = @"CREATE TABLE IF NOT EXISTS User (id integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL, age integer NOT NULL)";
+    //
+    //   BOOL isSuccend = [manager createTableWithSQLSentence:createSql];
+    //    if (!isSuccend) {
+    //        //创建表失败
+    //        NSLog(@"eror");
+    //    }
+    //
+    //    //插入数据
+    //    NSDictionary *dic = @{
+    //                          @"id":@(1001),
+    //                          @"name":@"lhj",
+    //                          @"age":@(24)
+    //                          };
+    //    [manager insertDataWithTableName:@"User" andParameterDic:dic];
 
     //查询
     NSDictionary *resultDic = [manager selectWithSQLSentence:@"SELECT * FROM User"];
     NSLog(@"%@",resultDic);
 
 #warning ----模拟网络请求
-    UIButton *
-    
+//    UIButton *
+
 }
 
 - (void)didReceiveMemoryWarning {
