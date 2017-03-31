@@ -25,6 +25,9 @@
 
 @interface FMDBManager : NSObject
 
+
+@property (nonatomic,strong)FMDatabase *dataBase;
+
 //此方法返回DBManager的单例
 +(FMDBManager *)shareManager;
 
@@ -47,7 +50,7 @@
 /**
  *查询数据
  **/
-- (NSDictionary *)selectWithSQLSentence:(NSString *)sentence;
+- (FMResultSet *)selectWithTableName:(NSString *)tableName andCondition:(NSString *)condition;
 
 /**
  *删除数据

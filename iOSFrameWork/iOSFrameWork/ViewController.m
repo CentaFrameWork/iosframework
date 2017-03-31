@@ -33,25 +33,49 @@
     FMDBManager *manager = [FMDBManager shareManager];
 
     //创建表
-    //    NSString *createSql = @"CREATE TABLE IF NOT EXISTS User (id integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL, age integer NOT NULL)";
-    //
-    //   BOOL isSuccend = [manager createTableWithSQLSentence:createSql];
-    //    if (!isSuccend) {
-    //        //创建表失败
-    //        NSLog(@"eror");
-    //    }
-    //
-    //    //插入数据
-    //    NSDictionary *dic = @{
-    //                          @"id":@(1001),
-    //                          @"name":@"lhj",
-    //                          @"age":@(24)
-    //                          };
-    //    [manager insertDataWithTableName:@"User" andParameterDic:dic];
+    NSString *createSql = @"CREATE TABLE IF NOT EXISTS User (id integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL, age integer NOT NULL)";
+
+   BOOL isSuccend = [manager createTableWithSQLSentence:createSql];
+    if (!isSuccend) {
+        //创建表失败
+        NSLog(@"eror");
+    }
+
+    //插入数据
+    for (int i = 0; i < 5; i ++) {
+        int idNum = 2000 + i;
+        NSDictionary *dic = @{
+                              @"id":@(idNum),
+                              @"name":@"lhj",
+                              @"age":@(24)
+                              };
+        [manager insertDataWithTableName:@"User" andParameterDic:dic];
+    }
+
 
     //查询
-    NSDictionary *resultDic = [manager selectWithSQLSentence:@"SELECT * FROM User"];
-    NSLog(@"%@",resultDic);
+    FMResultSet *rs = [manager selectWithTableName:@"User" andCondition:nil];
+    NSLog(@"%@",rs);
+    NSMutableArray *mArr = [NSMutableArray array];
+    while ([rs next]){
+        //遍历数据库
+        int idNum = [rs intForColumn:@"id"];
+        NSString *name = [rs stringForColumn:@"name"];
+        int age = [rs intForColumn:@"age"];
+
+        NSDictionary *dic = @{
+                              @"id":@(idNum),
+                              @"name":name,
+                              @"age":@(age)
+                              };
+        [mArr addObject:dic];
+
+    }
+
+    NSLog(@"%@",mArr);
+    //在查询数据库的方法中没有关闭数据库，得到查询结果之后，要关闭数据库
+    [manager.dataBase close];
+
 
 #warning ----模拟网络请求
 //    UIButton *

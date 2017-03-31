@@ -10,9 +10,7 @@
 
 static FMDBManager *dbManager = nil;
 
-@implementation FMDBManager{
-    FMDatabase *_dataBase;
-}
+@implementation FMDBManager
 
 //此方法返回FMDBManager的单例
 +(FMDBManager *)shareManager{
@@ -171,31 +169,28 @@ static FMDBManager *dbManager = nil;
 /**
  *查询数据
  **/
-- (NSDictionary *)selectWithSQLSentence:(NSString *)sentence{
+- (FMResultSet *)selectWithTableName:(NSString *)tableName andCondition:(NSString *)condition{
     if (![_dataBase open]) {
         //数据库打开失败
         return nil;
     }
 
-    FMResultSet *rs = [_dataBase executeQuery:sentence];
-    NSMutableArray *mArr = [NSMutableArray array];
-    while ([rs next]){
-        //遍历数据库
-        int idNum = [rs intForColumn:@"id"];
-        NSString *name = [rs stringForColumn:@"name"];
-        int age = [rs intForColumn:@"age"];
-
-        NSDictionary *dic = @{
-                              @"id":@(idNum),
-                              @"name":name,
-                              @"age":@(age)
-                              };
-
-
+    if (![self isTableExist:tableName]) {
+        NSLog(@"-------%@表不存在-------",tableName);
+        return nil;
     }
 
-    [_dataBase close];
-    return nil;
+    NSString *sqlString;
+
+    if (condition == nil) {
+        sqlString = [NSString stringWithFormat:@"SELECT * FROM %@",tableName];
+    }else{
+        sqlString = [NSString stringWithFormat:@"SELECT * FROM %@ WHIERE %@",tableName,condition];
+    }
+    
+    FMResultSet *rs = [_dataBase executeQuery:sqlString];
+
+    return rs;
 }
 
 
