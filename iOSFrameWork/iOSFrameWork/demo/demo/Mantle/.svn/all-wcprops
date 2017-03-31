@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle
+END
+NSValueTransformer+MTLInversionAdditions.m
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/NSValueTransformer+MTLInversionAdditions.m
+END
+NSObject+MTLComparisonAdditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/NSObject+MTLComparisonAdditions.h
+END
+MTLJSONAdapter.m
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/MTLJSONAdapter.m
+END
+NSArray+MTLManipulationAdditions.m
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/NSArray+MTLManipulationAdditions.m
+END
+NSObject+MTLComparisonAdditions.m
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/NSObject+MTLComparisonAdditions.m
+END
+NSValueTransformer+MTLPredefinedTransformerAdditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/NSValueTransformer+MTLPredefinedTransformerAdditions.h
+END
+MTLManagedObjectAdapter.h
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/MTLManagedObjectAdapter.h
+END
+NSValueTransformer+MTLPredefinedTransformerAdditions.m
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/NSValueTransformer+MTLPredefinedTransformerAdditions.m
+END
+MTLManagedObjectAdapter.m
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/MTLManagedObjectAdapter.m
+END
+MTLReflection.h
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/MTLReflection.h
+END
+MTLReflection.m
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/MTLReflection.m
+END
+MTLValueTransformer.h
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/MTLValueTransformer.h
+END
+MTLModel+NSCoding.h
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/MTLModel+NSCoding.h
+END
+MTLModel.h
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/MTLModel.h
+END
+NSDictionary+MTLManipulationAdditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/NSDictionary+MTLManipulationAdditions.h
+END
+Mantle.h
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/Mantle.h
+END
+MTLValueTransformer.m
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/MTLValueTransformer.m
+END
+MTLModel.m
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/MTLModel.m
+END
+MTLModel+NSCoding.m
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/MTLModel+NSCoding.m
+END
+NSError+MTLModelException.h
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/NSError+MTLModelException.h
+END
+NSDictionary+MTLManipulationAdditions.m
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/NSDictionary+MTLManipulationAdditions.m
+END
+NSValueTransformer+MTLInversionAdditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/NSValueTransformer+MTLInversionAdditions.h
+END
+NSArray+MTLManipulationAdditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/NSArray+MTLManipulationAdditions.h
+END
+MTLJSONAdapter.h
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/MTLJSONAdapter.h
+END
+NSError+MTLModelException.m
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/panketong/!svn/ver/5984/code/app/iOS/branches/branch_GZ_BaseHQ/PanKeTong/Classes/Vendors/Mantle/NSError+MTLModelException.m
+END

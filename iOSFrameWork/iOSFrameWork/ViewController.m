@@ -49,8 +49,6 @@
     //查询
     NSDictionary *resultDic = [manager selectWithSQLSentence:@"SELECT * FROM User"];
     NSLog(@"%@",resultDic);
-    
-
 
 }
 
