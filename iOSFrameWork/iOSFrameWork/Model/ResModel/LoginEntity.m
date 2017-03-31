@@ -29,12 +29,11 @@
     [_manager sendRequest:api];
 }
 
-- (void)respSuc:(id)data andRespClass:(id)cls
+- (void)respSuc:(id)data andRespApi:(id)respApi
 {
+    LoginApi *loginApi = respApi;
     
-   LoginEntity *entity = [self convertDic:data toEntity:cls];
-    
-    NSLog(@"entity = %@",entity);
+    LoginEntity *entity = [self convertDic:data toEntity:[loginApi getRespClass]];
     
     if ([self.delegate respondsToSelector:@selector(loginDelegate:)]) {
         [self.delegate loginDelegate:entity];

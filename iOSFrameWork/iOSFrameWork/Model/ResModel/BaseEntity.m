@@ -50,15 +50,15 @@
 
 
 #pragma mark - <ResponseDelegate>
-- (void)respSuc:(id)data andRespClass:(id)cls
+- (void)respSuc:(id)data andRespApi:(id)respApi
 {
     
 }
 
 
-- (void)respFail:(NSError *)error andRespClass:(id)cls
+- (void)respFail:(NSError *)error andRespApi:(id)respApi
 {
-    
+    NSLog(@"请求失败");
 }
 
 - (id)convertDic:(NSDictionary *)dic

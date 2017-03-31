@@ -11,6 +11,7 @@
 #import "ArrayDataSource.h"
 #import "LoginEntity.h"
 #import "ViewControllerCell.h"
+#import "UIView+YYAdd.h"
 
 
 static NSString * const CellIdentifier = @"ViewControllerCell";
@@ -52,7 +53,18 @@ static NSString * const CellIdentifier = @"ViewControllerCell";
 
 - (void)initView
 {
-     _mainTableView = [[UITableView alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    //创建button
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.frame = CGRectMake((self.view.frame.size.width - 150)/2, 50, 150,50);
+    [button setBackgroundColor:[UIColor lightGrayColor]];
+    [button setTitle:@"请求数据" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(buttonAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+    
+    _mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, button.bottom + 50, self.view.frame.size.width, self.view.frame.size.height - 100)];
     _mainTableView.delegate = self;
     [self.view addSubview:_mainTableView];
     
@@ -63,19 +75,10 @@ static NSString * const CellIdentifier = @"ViewControllerCell";
     };
     
     _arrayDataSource = [[ArrayDataSource alloc] initWithItems:_dataSourceArr
-                                                   cellIdentifier:CellIdentifier
-                                               configureCellBlock:configureCell];
+                                               cellIdentifier:CellIdentifier
+                                           configureCellBlock:configureCell];
     _mainTableView.dataSource = _arrayDataSource;
     [_mainTableView registerNib:[ViewControllerCell nib] forCellReuseIdentifier:CellIdentifier];
-    
-    //创建button
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = CGRectMake(100, 200, 100, 100);
-    [button setBackgroundColor:[UIColor lightGrayColor]];
-    [button setTitle:@"请求数据" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(buttonAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
 }
 
 - (void)buttonAction
