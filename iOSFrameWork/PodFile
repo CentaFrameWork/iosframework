@@ -2,17 +2,30 @@ platform :ios, '8.0'
 #use_frameworks!
 
 target 'iOSFrameWork' do
-pod 'SDWebImage', '~> 4.0.0'
-pod 'YYKit', '~> 1.0.9'
-pod 'MBProgressHUD', '~> 1.0.0'
-pod 'FMDB', '~> 2.6.2'
-pod 'Wq_RequestManager', '~> 1.0.0'
-pod 'StreamingKit', '~> 0.1'
-pod 'JPush', '~> 3.0.6'
-pod 'TZImagePickerController', '~> 1.8.9'
-pod 'VPImageCropper', '~> 0.0.4'
-pod 'FLAnimatedImage', '~> 1.0.12'
-
-
+    
+    pod 'SDWebImage', '~> 4.0.0'
+    pod 'YYKit', '~> 1.0.9'
+    pod 'MBProgressHUD', '~> 1.0.0'
+    pod 'FMDB', '~> 2.6.2'
+    pod 'Wq_RequestManager', '~> 1.0.0'
+    pod 'StreamingKit', '~> 0.1'
+    pod 'JPush', '~> 3.0.6'
+    pod 'TZImagePickerController', '~> 1.8.9'
+    pod 'VPImageCropper', '~> 0.0.4'
+    pod 'FLAnimatedImage', '~> 1.0.12'
+    # U-Share SDK UI模块（分享面板，建议添加）
+    pod 'UMengUShare/UI'
+    # 微信(完整版14.4M)
+    pod 'UMengUShare/Social/WeChat'
+    # 新浪微博(完整版25.3M)
+    pod 'UMengUShare/Social/Sina'
+    pod 'CustomActionsheet', '~> 0.1.1'
+    pod 'KAProgressLabel', '~> 3.3.2'
+    pod 'BaiduMobStat', '~> 4.5.0'
+    pod 'MMDrawerController', '~> 0.6.0'
+    pod 'Mantle', '~> 2.1.0'
+    pod 'MJRefresh', '~> 3.1.12'
+    pod 'Reachability', '~> 3.2'
+    pod 'TPKeyboardAvoiding', '~> 1.3.1'
 
 end

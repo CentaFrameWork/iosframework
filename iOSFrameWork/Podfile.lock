@@ -14,6 +14,8 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - BaiduMobStat (4.5.0)
+  - CustomActionsheet (0.1.1)
   - FLAnimatedImage (1.0.12)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
@@ -21,12 +23,46 @@ PODS:
   - JCore (1.1.5)
   - JPush (3.0.6):
     - JCore (~> 1.1.1)
+  - KAProgressLabel (3.3.2)
+  - Mantle (2.1.0):
+    - Mantle/extobjc (= 2.1.0)
+  - Mantle/extobjc (2.1.0)
   - MBProgressHUD (1.0.0)
+  - MJRefresh (3.1.12)
+  - MMDrawerController (0.6.0):
+    - MMDrawerController/Core (= 0.6.0)
+    - MMDrawerController/MMDrawerBarButtonItem (= 0.6.0)
+    - MMDrawerController/MMDrawerVisualStates (= 0.6.0)
+    - MMDrawerController/Subclass (= 0.6.0)
+  - MMDrawerController/Core (0.6.0)
+  - MMDrawerController/MMDrawerBarButtonItem (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.6.0):
+    - MMDrawerController/Core
+  - MMDrawerController/Subclass (0.6.0):
+    - MMDrawerController/Core
+  - Reachability (3.2)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - StreamingKit (0.1.29)
+  - TPKeyboardAvoiding (1.3.1)
   - TZImagePickerController (1.8.9)
+  - UMengUShare/Core (6.4.5):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.4.5)
+  - UMengUShare/Social/ReducedSina (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedWeChat (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/Sina (6.4.5):
+    - UMengUShare/Core
+    - UMengUShare/Social/ReducedSina
+  - UMengUShare/Social/WeChat (6.4.5):
+    - UMengUShare/Core
+    - UMengUShare/Social/ReducedWeChat
+  - UMengUShare/UI (6.4.5):
+    - UMengUShare/Core
   - VPImageCropper (0.0.4)
   - Wq_RequestManager (1.0.0):
     - AFNetworking (~> 3.1.0)
@@ -35,31 +71,51 @@ PODS:
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
+  - BaiduMobStat (~> 4.5.0)
+  - CustomActionsheet (~> 0.1.1)
   - FLAnimatedImage (~> 1.0.12)
   - FMDB (~> 2.6.2)
   - JPush (~> 3.0.6)
+  - KAProgressLabel (~> 3.3.2)
+  - Mantle (~> 2.1.0)
   - MBProgressHUD (~> 1.0.0)
+  - MJRefresh (~> 3.1.12)
+  - MMDrawerController (~> 0.6.0)
+  - Reachability (~> 3.2)
   - SDWebImage (~> 4.0.0)
   - StreamingKit (~> 0.1)
+  - TPKeyboardAvoiding (~> 1.3.1)
   - TZImagePickerController (~> 1.8.9)
+  - UMengUShare/Social/Sina
+  - UMengUShare/Social/WeChat
+  - UMengUShare/UI
   - VPImageCropper (~> 0.0.4)
   - Wq_RequestManager (~> 1.0.0)
   - YYKit (~> 1.0.9)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  BaiduMobStat: 404e5d87147428dd5baf0912c5b95647b8a25367
+  CustomActionsheet: 7202fa4fb0f607f70c8f52445ac94d06380b609d
   FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   JCore: 9bd9c770c877c583d98b90a68792b8361974c231
   JPush: c41be50eb1a574a66aeb68d237f00a4ec6ec3a82
+  KAProgressLabel: 95dd072d16bb483c0f58012d0e5466a334091af8
+  Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  MMDrawerController: e3a54a5570388463ad3b36975251575b50c4e1a0
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   StreamingKit: c329785aaef3ac142d4ae388345bfe1ed23cfd45
+  TPKeyboardAvoiding: 0d6af20e95e2850f4c621841225b59ec7d8dd852
   TZImagePickerController: b44f4cfc6d320dab9a53adcdda725099be36dcda
+  UMengUShare: a5711c54e640b04e3048e931d2b88d50f9cfa55c
   VPImageCropper: f4895315460bd05fbb22dbee6b063bdd43f25797
   Wq_RequestManager: ff52c25fa4c8418e95e40069b4cb54dab491ace4
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 1e4680113bf2fbc1e882941ee6cb3bdd6701ded9
+PODFILE CHECKSUM: 6c7fc7814349b80772c5b685e6db568f7381b901
 
 COCOAPODS: 1.3.1
