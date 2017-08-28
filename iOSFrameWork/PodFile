@@ -7,5 +7,12 @@ pod 'YYKit', '~> 1.0.9'
 pod 'MBProgressHUD', '~> 1.0.0'
 pod 'FMDB', '~> 2.6.2'
 pod 'Wq_RequestManager', '~> 1.0.0'
+pod 'StreamingKit', '~> 0.1'
+pod 'JPush', '~> 3.0.6'
+pod 'TZImagePickerController', '~> 1.8.9'
+pod 'VPImageCropper', '~> 0.0.4'
+pod 'FLAnimatedImage', '~> 1.0.12'
+
+
 
 end

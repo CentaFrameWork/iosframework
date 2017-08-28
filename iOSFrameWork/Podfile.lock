@@ -14,13 +14,20 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - FLAnimatedImage (1.0.12)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - JCore (1.1.5)
+  - JPush (3.0.6):
+    - JCore (~> 1.1.1)
   - MBProgressHUD (1.0.0)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - StreamingKit (0.1.29)
+  - TZImagePickerController (1.8.9)
+  - VPImageCropper (0.0.4)
   - Wq_RequestManager (1.0.0):
     - AFNetworking (~> 3.1.0)
   - YYKit (1.0.9):
@@ -28,20 +35,31 @@ PODS:
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
+  - FLAnimatedImage (~> 1.0.12)
   - FMDB (~> 2.6.2)
+  - JPush (~> 3.0.6)
   - MBProgressHUD (~> 1.0.0)
   - SDWebImage (~> 4.0.0)
+  - StreamingKit (~> 0.1)
+  - TZImagePickerController (~> 1.8.9)
+  - VPImageCropper (~> 0.0.4)
   - Wq_RequestManager (~> 1.0.0)
   - YYKit (~> 1.0.9)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  JCore: 9bd9c770c877c583d98b90a68792b8361974c231
+  JPush: c41be50eb1a574a66aeb68d237f00a4ec6ec3a82
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  StreamingKit: c329785aaef3ac142d4ae388345bfe1ed23cfd45
+  TZImagePickerController: b44f4cfc6d320dab9a53adcdda725099be36dcda
+  VPImageCropper: f4895315460bd05fbb22dbee6b063bdd43f25797
   Wq_RequestManager: ff52c25fa4c8418e95e40069b4cb54dab491ace4
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 4e14fd31355019b45677fda52699e8aeb88add24
+PODFILE CHECKSUM: 1e4680113bf2fbc1e882941ee6cb3bdd6701ded9
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.3.1

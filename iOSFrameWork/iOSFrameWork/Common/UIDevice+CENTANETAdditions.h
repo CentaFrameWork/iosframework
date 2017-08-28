@@ -10,4 +10,5 @@
 + (UIInterfaceOrientation)currentOrientation;
 + (NSString *)getBundleIdentifier;
 - (NSString *)getMacAddress;
+
 @end
